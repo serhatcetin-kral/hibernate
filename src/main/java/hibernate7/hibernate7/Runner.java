@@ -51,6 +51,10 @@ public class Runner {
 	       session.save(tc3);
 		
 		tr.commit();
+		
+		sf.close();
+		session.close();
+		
 	}
 
 }

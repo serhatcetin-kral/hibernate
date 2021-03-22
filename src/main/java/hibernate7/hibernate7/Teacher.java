@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 //@Table(name="teacher2")
@@ -14,6 +15,7 @@ public class Teacher {
 	@Column(name="fullname")
 	private String name;
 	private String subject;
+	//@Transient
 	private int salary;
 	int getId() {
 		return id;

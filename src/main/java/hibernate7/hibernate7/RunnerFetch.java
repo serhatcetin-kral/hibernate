@@ -112,7 +112,8 @@ public class RunnerFetch {
 		tr.commit();
 		
 		
-		
+		sf.close();
+		session.close();
 		
 		
 	}
