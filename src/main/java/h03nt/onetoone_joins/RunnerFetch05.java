@@ -91,15 +91,37 @@ public class RunnerFetch05 {
 		
 		//fetch all diary information of common record from student5 and Diary5
 		
-		String hql="from Diary5 d inner join fetch d.student";
+//		String hql="from Diary5 d inner join fetch d.student";
+//		
+//		List<Diary5> result=session.createQuery(hql).getResultList();
+//		for(Diary5 w:result) {
+//			
+//			
+//			System.out.print(w);
+//		}
 		
-		List<Diary5> result=session.createQuery(hql).getResultList();
-		for(Diary5 w:result) {
+		
+//		// fetch student name student grade diary name of all records from students5 and diary5 tables
+//		
+//		
+//		String sql="select s.name,s.grade,d.d_name from Students5 s full join Diary5 d on s.id=d.student_id";
+//		//1way sql
+//		List<Object[]> result=session.createSQLQuery(sql).getResultList();
+//		
+//		for(Object[] w : result) {
+//			
+//			System.out.print(Arrays.toString(w));
+//		}
+		
+		//2.way hql 
+		 String  hql="select s.name,s.grade,d.d_name from Students5 s full join Diary5 d on s.id=d.student";
+		 List<Object[]> result=session.createQuery(hql).getResultList();
+		 
+		for(Object[] w:result) {
 			
 			
-			System.out.print(w);
+			System.out.println(Arrays.toString(w));
 		}
-		
 		
 		tr.commit();
 		
