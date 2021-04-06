@@ -3,6 +3,7 @@ package h04_onetomany_join;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
@@ -19,8 +20,8 @@ public class Student04 {
 	private int grade;
 	
 	
-	
-	@OneToMany(mappedBy="student")
+	@OneToMany(mappedBy="student", orphanRemoval=true, cascade=CascadeType.ALL)
+	//@OneToMany(mappedBy="student")
 	private List<Books04> books=new ArrayList<Books04>();
 	
 	

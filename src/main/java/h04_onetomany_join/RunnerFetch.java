@@ -32,8 +32,8 @@ public class RunnerFetch {
 		
 		
 		//fetch the all books of a student whose id is 1001 by using get() meth
-		stu=session.get(Student04.class,1001);	
-		System.out.println(stu);
+//		stu=session.get(Student04.class,1001);	
+//		System.out.println(stu);
 //		
 		// fetch owner of whose id is 101 book by using get() method
 		
@@ -119,11 +119,47 @@ public class RunnerFetch {
 	// delete all data  use hql sort way
 	
 		session.delete(stu);
-		//hata var bida bak
+		
 	
-	
-	
-	
+//	book=session.get(Books04.class, 101);
+//	                session.delete(book);
+	                
+	                //2.way delete recoord with delete method 
+	                book=session.get(Books04.class, 102);
+	                       
+	               // session.delete("Books04", book);
+	                
+	                // delete record from parent table
+	                // delete record whose id is 1003
+	                
+	                // you can not delete recored from parent table which record has child record
+	                //you ll have exception constranviolationexception
+	                
+	                
+	                // delete record 1001 from student04 you can not delete because child
+	                
+////	               
+////	                
+//                String hql="delete from Student04 where id='1002'";
+//	                 int result=session.createQuery(hql).executeUpdate();
+	         
+	                //delete record 1003 it has child 
+	                //1.way delete child record 103 not recommended
+//	                
+//	                book=session.get(Books04.class, 103);
+//	                
+//	                session.delete(book);
+	                
+//	                stu=session.get(Student04.class, 1003);
+//	                session.delete(stu);
+	                
+	                //2.WAY A) GO TO PARENT CLASS
+	                //B) CHANGE (mappedBy="student") to (mappedBy="student" orphanRevoval=true,cascade=CascadeType.ALL)"
+	                
+	                 
+	                stu=session.get(Student04.class,1001);
+	            session.delete(stu);
+	                
 		tr.commit();
 		
 		
