@@ -41,9 +41,15 @@ public class Books066 {
 	void setStudents(List<Students066> students) {
 		this.students = students;
 	}
-//
+
 //	@Override
 //	public String toString() {
 //		return "Books066 [b_name=" + b_name + ", b_id=" + b_id + ", students=" + students + "]";
 //	}
+	
+	@Override
+	public String toString() {
+		return "Books066 [b_name=" + b_name + ", b_id=" + b_id +"]";
+	}
+	
 }

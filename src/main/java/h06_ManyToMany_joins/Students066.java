@@ -59,12 +59,15 @@ public class Students066 {
 		this.booklist = books;
 	}
 
+	@Override
+	public String toString() {
+		return "Students06 [name=" + name + ", id=" + id + ", grade=" + grade + ", books=" + booklist + "]";
+	}
+	
 //	@Override
 //	public String toString() {
-//		return "Students06 [name=" + name + ", id=" + id + ", grade=" + grade + ", books=" + booklist + "]";
+//		return "Students06 [name=" + name + ", id=" + id + ", grade=" + grade + "]";
 //	}
-	
-	
 	
 	
 	

@@ -74,6 +74,9 @@ public class RunnerSave06 {
 		
 		session.save(bk3);
 		
+		session.close();
+        sf.close();
+		
 		tr.commit();
 		
 		
